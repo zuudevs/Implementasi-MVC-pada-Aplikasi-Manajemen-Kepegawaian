@@ -1,0 +1,39 @@
+# Core PHP / Composer
+vendor/
+composer.lock
+
+# Log & Cache
+*.log
+app/cache/
+app/logs/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.project
+.buildpath
+.settings/
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Microsoft Office Temp Files
+~$*.pptx
+~$*.docx
+~$*.xlsx
+
+# Local Configuration 
+.env
+app/config/config.local.php
