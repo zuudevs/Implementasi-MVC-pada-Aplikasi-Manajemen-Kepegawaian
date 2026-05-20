@@ -7,7 +7,7 @@
  * URL format: /controller/method/param1/param2/...
  */
 class App {
-    protected string $controller = DEFAULT_CONTROLLER;
+    protected mixed $controller = DEFAULT_CONTROLLER;
     protected string $method     = DEFAULT_METHOD;
     protected array  $params     = [];
 
