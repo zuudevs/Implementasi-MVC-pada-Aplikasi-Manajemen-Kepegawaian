@@ -212,6 +212,8 @@ flowchart TD
 
     style Start fill:#90EE90
     style End fill:#FFB6C6
+    style Start color:#000000
+    style End color:#000000
 ```
 
 #### 3.2 Add/Edit Employee Flow
@@ -249,6 +251,10 @@ flowchart TD
     style End fill:#FFB6C6
     style HasErrors fill:#FFE4B5
     style CheckNIK fill:#FFE4B5
+    style Start color:#000000
+    style End color:#000000
+    style HasErrors color:#000000
+    style CheckNIK color:#000000
 ```
 
 #### 3.3 Delete Employee Flow
@@ -280,6 +286,10 @@ flowchart TD
     style End fill:#FFB6C6
     style EmpExists fill:#FFE4B5
     style DelSuccess fill:#FFE4B5
+    style Start color:#000000
+    style End color:#000000
+    style EmpExists color:#000000
+    style DelSuccess color:#000000
 ```
 
 ### 4. Sequence Diagram
@@ -288,15 +298,15 @@ flowchart TD
 
 ```mermaid
 sequenceDiagram
-    participant Browser as 🌐 Browser
-    participant Apache as 🖥️ Apache
-    participant Index as 📄 public/index.php
-    participant App as 🔀 App (Router)
-    participant Controller as 📋 Employee Controller
-    participant Model as 💾 Employee_model
-    participant DB as 🗄️ Database
-    participant MySQL as 🔲 MySQL
-    participant View as 👁️ View (Blade)
+    participant Browser as Browser
+    participant Apache as Apache
+    participant Index as public/index.php
+    participant App as App (Router)
+    participant Controller as Employee Controller
+    participant Model as Employee_model
+    participant DB as Database
+    participant MySQL as MySQL
+    participant View as View (Blade)
 
     Browser->>Apache: GET /employee?q=john&page=1
     Apache->>Index: URL Rewrite to ?url=employee
@@ -343,12 +353,12 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    participant Browser as 🌐 Browser
-    participant Controller as 📋 Employee Controller
-    participant Model as 💾 Employee_model
-    participant DB as 🗄️ Database
-    participant MySQL as 🔲 MySQL
-    participant Session as 💾 $_SESSION
+    participant Browser as Browser
+    participant Controller as Employee Controller
+    participant Model as Employee_model
+    participant DB as Database
+    participant MySQL as MySQL
+    participant Session as $_SESSION
 
     Browser->>Controller: POST /employee/add
     activate Controller
@@ -391,12 +401,12 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    participant Browser as 🌐 Browser
-    participant Controller as 📋 Employee Controller
-    participant Model as 💾 Employee_model
-    participant DB as 🗄️ Database
-    participant MySQL as 🔲 MySQL
-    participant View as 👁️ View
+    participant Browser as Browser
+    participant Controller as Employee Controller
+    participant Model as Employee_model
+    participant DB as Database
+    participant MySQL as MySQL
+    participant View as View
 
     Browser->>Controller: GET /employee/edit/5
     Controller->>Model: getById(5)
@@ -440,11 +450,11 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    participant Browser as 🌐 Browser
-    participant Controller as 📋 Employee Controller
-    participant Model as 💾 Employee_model
-    participant DB as 🗄️ Database
-    participant MySQL as 🔲 MySQL
+    participant Browser as Browser
+    participant Controller as Employee Controller
+    participant Model as Employee_model
+    participant DB as Database
+    participant MySQL as MySQL
 
     Browser->>Controller: POST /employee/delete/5
     Controller->>Model: getById(5)
